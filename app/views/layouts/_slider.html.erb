@@ -1,0 +1,20 @@
+<div class="banner">
+  <div class="carousel slide" id="myCarousel">
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+      <% @sliders.each do |slider| %>
+          <div class="item <%= @sliders.first == slider ? 'active' : '' %>">
+            <img src= <%= slider.phote %> alt="">
+            <div class="carousel-caption">
+              <i class="fw-icon-desktop"></i>
+              <h2><%= slider.title.titleize %></h2>
+              <h1><%= slider.desc %></h1>
+              <a href="#myModal" role="button" class="btn" data-toggle="modal"> more info</a>
+            </div>
+          </div>
+      <% end %>
+    </div>
+    <a data-slide="prev" href="#myCarousel" class="carousel-control left"><i class="fw-icon-chevron-left"></i></a>
+    <a data-slide="next" href="#myCarousel" class="carousel-control right"><i class="fw-icon-chevron-right"></i></a>
+  </div>
+</div>

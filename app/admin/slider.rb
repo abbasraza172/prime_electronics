@@ -13,5 +13,14 @@ ActiveAdmin.register Slider do
 #   permitted
 # end
 
+  form do |f|
+    f.inputs "Slider Details" do
+      f.input :title
+      f.input :desc
+      f.input :phote, input_html: {'type' =>"filepicker" ,'data-fp-apikey' => "Azuln4PAOROO3bqS8ERkQz"}
+    end
+    f.actions
+  end
+
 
 end
